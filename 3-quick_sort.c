@@ -19,7 +19,7 @@ void swap(int *a, int *b)
  * @end: the end of the array
  * Return: the index of the partition within the array
  */
-int partition(int *arr, int start, int end)
+int partition(int *arr, int start, int end, size_t size)
 {
 	int pivot = arr[end];
 	int j = start, i = start - 1;
@@ -33,6 +33,7 @@ int partition(int *arr, int start, int end)
 		}
 	}
 	swap(&arr[i + 1], &arr[end]);
+	print_array(arr, size);
 	return (i + 1);
 }
 
@@ -46,8 +47,8 @@ void qSortRec(int *arr, int start, int end, size_t size)
 {
 	if (start < end)
 	{
-		int pi = partition(arr, start, end);
-	    print_array(arr, size);
+		int pi = partition(arr, start, end, size);
+
 		qSortRec(arr, start, pi - 1, size);
 		qSortRec(arr, pi + 1, end, size);
 	}
