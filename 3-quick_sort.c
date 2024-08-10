@@ -17,6 +17,7 @@ void swap(int *a, int *b)
  * @arr: the array to partition
  * @start: the start of the subarray
  * @end: the end of the array
+ * @size: the size of the array
  * Return: the index of the partition within the array
  */
 int partition(int *arr, int start, int end, size_t size)
@@ -42,6 +43,7 @@ int partition(int *arr, int start, int end, size_t size)
  * @arr: the section of the array to sort
  * @start: the starting index of the subsection of the array
  * @end: the ending index of the subsection of the array
+ * @size: the size of the array
  */
 void qSortRec(int *arr, int start, int end, size_t size)
 {
