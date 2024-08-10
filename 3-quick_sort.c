@@ -22,9 +22,9 @@ void swap(int *a, int *b)
 int partition(int *arr, int start, int end)
 {
 	int pivot = arr[end];
-	int i = start - 1;
+	int j = start, i = start - 1;
 
-	for (int j = start; j <= end - 1; j++)
+	for (j = start; j <= end - 1; j++)
 	{
 		if (arr[j] <= pivot)
 		{
