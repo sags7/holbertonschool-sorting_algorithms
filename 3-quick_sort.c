@@ -17,7 +17,6 @@ void swap(int *a, int *b)
  * @arr: the array to partition
  * @start: the start of the subarray
  * @end: the end of the array
- * @size: the size of the array
  * Return: the index of the partition within the array
  */
 int partition(int *arr, int start, int end)
